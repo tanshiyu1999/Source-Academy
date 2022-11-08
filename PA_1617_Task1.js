@@ -5,6 +5,29 @@ function is_nucleobase(str) {
     }
     return false;
 }
+// is_nucleobase("A");
 
-is_nucleobase("A");
+// Task 1B
+function is_dna_strand(lst) {
+    return accumulate((s, acc) => (is_nucleobase(s) ? acc : false), true, lst);
+}
+// is_dna_strand(list("A", "G", "A")); // true
+
+// Task 1C
+function combine(lst) {
+    return is_null(lst)
+           ? null 
+           : append(head(lst), combine(tail(lst)));
+}
+// combine(list(list("A", "G", "A"), list("G", "C", "T", "A"), list("C")));
+
+// Task 1D
+function oxoguanine_repair(lst) {
+    return is_null(lst)
+           ? null
+           : (head(lst) === "8")
+           ? pair("G", oxoguanine_repair(tail(lst)))
+           : pair(head(lst), oxoguanine_repair(tail(lst)));
+}
+// oxoguanine_repair(list("A", "8", "A", "8", "C", "T", "A", "C"));
 
