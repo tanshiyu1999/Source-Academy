@@ -45,8 +45,7 @@ function count_lower_neighbors(emap, r , c) {
     let totalPeak = 0;
     
     
-    for (let r = 0; r < rLen, r = r + 1) {
-        display(r);
+    for (let r = 0; r < rLen; r = r + 1) {
         if (r === 0 || r === rLen - 1) {
             continue;
         }
@@ -63,10 +62,10 @@ function count_lower_neighbors(emap, r , c) {
     return totalPeak;
  }
  
-const emap = [[3, 1, 1, 1, 1, 1, 1],
-              [1, 1, 1, 1, 2, 3, 1],
-              [1, 0, 3, 2, 1, 1, 0],
-              [1, 1, 1, 1, 3, 1, 1],
-              [1, 2, 1, 1, 3, 1, 3],
-              [1, 1, 1, 1, 4, 1, 1]];
-count_peaks(emap);
+// const emap = [[3, 1, 1, 1, 1, 1, 1],
+//               [1, 1, 1, 1, 2, 3, 1],
+//               [1, 0, 3, 2, 1, 1, 0],
+//               [1, 1, 1, 1, 3, 1, 1],
+//               [1, 2, 1, 1, 3, 1, 3],
+//               [1, 1, 1, 1, 4, 1, 1]];
+// count_peaks(emap);
