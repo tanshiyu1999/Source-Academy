@@ -18,5 +18,18 @@ function make_big_int_from_number(num) {
     }
     return output;
 }
-
 // make_big_int_from_number(24234);
+
+// Task 1B
+function big_int_to_string(lst) {
+    let output = 0;
+    let lstLen = length(lst);
+    while(lstLen !== 0) {
+        let temp = list_ref(lst, lstLen - 1);
+        output = output * 10 + temp;
+        lstLen = lstLen - 1;
+    }
+    return output;
+}
+
+// big_int_to_string(list(0));
