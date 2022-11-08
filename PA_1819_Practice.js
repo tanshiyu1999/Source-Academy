@@ -48,4 +48,18 @@ function big_int_mult_by_digit(lst, n) {
     let c = a * n;
     return make_big_int_from_number(c);
 }
-big_int_mult_by_digit(list(0),5); 
+// big_int_mult_by_digit(list(0),5); 
+
+// Task 1E
+function big_int_mult_by_10_pow_n(lst, n) {
+    let a = big_int_to_string(lst);
+    let b = a * math_pow(10,n);
+    return make_big_int_from_number(b);
+}
+// big_int_mult_by_10_pow_n(list(7,4,3), 3);
+
+// Task 1F
+function big_int_mult() {
+    return 1;
+}
+// Same working
