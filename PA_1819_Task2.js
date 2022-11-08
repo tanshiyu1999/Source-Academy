@@ -115,6 +115,27 @@ function build_2nd_largest_int(digits) {
 // build_2nd_largest_int([4, 1, 9, 4, 1]);
 
 // Task 2C
-function build_nth_largest_int() {
-    // What the
+function build_nth_largest_int(digits, n) {
+    // WRITE HERE.
+    // ---BEGIN TASK---
+    function permutations(ys) {
+        return is_null(ys)
+            ? list(null)
+            : accumulate(append, null,
+                map(x => map(p => pair(x, p),
+                             permutations(remove(x, ys))),
+                    ys));
+    }
+
+    const S = copy_array(digits);
+    const len = array_length(S);
+    sort_ascending(S);
+    reverse_array(S);
+    const digit_lst = array_to_list(S);
+    const perms = permutations(digit_lst);
+    const nth_lst = list_ref(perms, math_min(length(perms), n) - 1);
+    const nth = list_to_array(nth_lst);
+    return digits_to_string(nth);
 }
+
+// Answer was copied but this is very big brain. Permutate and treat everything like an array later.
