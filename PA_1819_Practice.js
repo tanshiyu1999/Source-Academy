@@ -31,5 +31,21 @@ function big_int_to_string(lst) {
     }
     return output;
 }
-
 // big_int_to_string(list(0));
+
+// Task 1C
+function big_int_add(lst1, lst2) {
+    let a = big_int_to_string(lst1);
+    let b = big_int_to_string(lst2);
+    let c = a + b;
+    return make_big_int_from_number(c);
+}
+// big_int_add(list(0), list(3, 2, 1));
+
+// Task 1D
+function big_int_mult_by_digit(lst, n) {
+    let a = big_int_to_string(lst);
+    let c = a * n;
+    return make_big_int_from_number(c);
+}
+big_int_mult_by_digit(list(0),5); 
