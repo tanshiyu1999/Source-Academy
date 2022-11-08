@@ -31,3 +31,17 @@ function oxoguanine_repair(lst) {
 }
 // oxoguanine_repair(list("A", "8", "A", "8", "C", "T", "A", "C"));
 
+// Task 1E
+function find_gene_start(lst) {
+    let lstLen = length(lst);
+    for (let i = 0; i < lstLen; i = i + 1) {
+        if( (list_ref(lst,i) === "A") || (list_ref(lst,i+1) === "T") || (list_ref(lst,i+2) === "G") ) {
+            
+        }
+    }
+    
+}
+
+// Task 1F
+
+
